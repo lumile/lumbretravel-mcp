@@ -1,0 +1,48 @@
+{
+  "name": "lumbretravel-mcp",
+  "version": "0.1.2",
+  "description": "A Model Context Protocol server for LumbreTravel",
+  "private": true,
+  "main": "build/index.js",
+  "homepage": "https://lumile.com.ar",
+  "bugs": "https://github.com/lumile/lumbretravel-mcp/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumile/lumbretravel-mcp.git"
+  },
+  "type": "module",
+  "author": "Lumile Argentina S.A. - https://lumile.com.ar",
+  "bin": {
+    "lumbretravel-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "@types/moment": "latest",
+    "dotenv": "latest",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/node-fetch": "^2.6.12",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "typescript": "^5.3.3",
+    "vitest": "^2.1.8"
+  }
+}

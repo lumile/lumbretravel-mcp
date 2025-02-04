@@ -2,7 +2,7 @@
 
 An MCP server that provides access to LumbreTravel API.
 
-LumbreTravel is a platform for managing travel programs and activities and this is the MCP server for it.  That allows you to use it on Claude Desktop or other MCP clients.
+[LumbreTravel](https://lumbretravel.com.ar/) is a platform for managing travel programs and activities and this is the MCP server for it.  That allows you to use it on [Claude Desktop](https://claude.ai/download) or other MCP clients.
 
 ## Features
 

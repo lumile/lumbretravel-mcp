@@ -1,0 +1,29 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - clientId
+      - clientSecret
+      - username
+      - password
+    properties:
+      clientId:
+        type: string
+        description: The client ID for the LumbreTravel server.
+      clientSecret:
+        type: string
+        description: The client secret for the LumbreTravel server.
+      username:
+        type: string
+        description: Username for the LumbreTravel API access.
+      password:
+        type: string
+        description: Password for the LumbreTravel API access.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    config => ({ command: 'node', args: ['build/index.js'], env: { CLIENT_ID: config.clientId, CLIENT_SECRET: config.clientSecret, USERNAME: config.username, PASSWORD: config.password } })

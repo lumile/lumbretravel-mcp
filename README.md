@@ -1,3 +1,4 @@
+![](https://badge.mcpx.dev?type=server 'MCP Server')
 # LumbreTravel MCP Server
 
 An MCP server that provides access to LumbreTravel API.

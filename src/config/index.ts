@@ -1,23 +1,23 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import dotenv from 'dotenv'
+dotenv.config()
 
 export const SERVER_CONFIG = {
   name: 'lumbretravel',
-  version: '0.1.6',
+  version: '0.1.7',
   capabilities: {
     resources: {},
     tools: {},
     prompts: {},
     sampling: {}
   }
-};
+}
 
 export const API_CONFIG = {
-  baseUrl: process.env.BASE_URL as string || 'https://app-api.lumbretravel.com.ar',
+  baseUrl: process.env.BASE_URL! || 'https://app-api.lumbretravel.com.ar',
   auth: {
-    username: process.env.USERNAME as string,
-    password: process.env.PASSWORD as string,
-    clientId: process.env.CLIENT_ID as string,
-    clientSecret: process.env.CLIENT_SECRET as string
+    username: process.env.EMAIL!,
+    password: process.env.PASSWORD!,
+    clientId: process.env.CLIENT_ID!,
+    clientSecret: process.env.CLIENT_SECRET!
   }
-};
+}

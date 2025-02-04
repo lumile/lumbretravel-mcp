@@ -144,7 +144,7 @@ Add this configuration to your Claude Desktop config file:
       "env": {
         "CLIENT_ID": "<YOUR_CLIENT_ID>",
         "CLIENT_SECRET": "<YOUR_CLIENT_SECRET>",
-        "USERNAME": "<YOUR_USERNAME>",
+        "EMAIL": "<YOUR_EMAIL>",
         "PASSWORD": "<YOUR_PASSWORD>"
       }
     }
@@ -175,7 +175,7 @@ npm run build
       "env": {
         "CLIENT_ID": "<YOUR_CLIENT_ID>",
         "CLIENT_SECRET": "<YOUR_CLIENT_SECRET>",
-        "USERNAME": "<YOUR_USERNAME>",
+        "EMAIL": "<YOUR_EMAIL>",
         "PASSWORD": "<YOUR_PASSWORD>"
       }
     }

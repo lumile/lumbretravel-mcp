@@ -8,7 +8,7 @@ startCommand:
     required:
       - clientId
       - clientSecret
-      - username
+      - email
       - password
     properties:
       clientId:
@@ -17,13 +17,13 @@ startCommand:
       clientSecret:
         type: string
         description: The client secret for the LumbreTravel server.
-      username:
+      email:
         type: string
-        description: Username for the LumbreTravel API access.
+        description: Email for the LumbreTravel API access.
       password:
         type: string
         description: Password for the LumbreTravel API access.
   commandFunction:
     # A function that produces the CLI command to start the MCP on stdio.
     |-
-    config => ({ command: 'node', args: ['build/index.js'], env: { CLIENT_ID: config.clientId, CLIENT_SECRET: config.clientSecret, USERNAME: config.username, PASSWORD: config.password } })
+    config => ({ command: 'node', args: ['build/index.js'], env: { CLIENT_ID: config.clientId, CLIENT_SECRET: config.clientSecret, EMAIL: config.email, PASSWORD: config.password } })

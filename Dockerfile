@@ -35,7 +35,7 @@ RUN npm ci --omit=dev --ignore-scripts
 # Set environment variables
 ENV CLIENT_ID=<YOUR_CLIENT_ID>
 ENV CLIENT_SECRET=<YOUR_CLIENT_SECRET>
-ENV USERNAME=<YOUR_USERNAME>
+ENV EMAIL=<YOUR_EMAIL>
 ENV PASSWORD=<YOUR_PASSWORD>
 
 # Command to run the application

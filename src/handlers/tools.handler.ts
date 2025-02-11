@@ -28,8 +28,8 @@ export class ToolsHandler {
           }
         },
         {
-          name: 'get_program_by_name',
-          description: 'Obtiene un programa de viajes de LumbreTravel por nombre',
+          name: 'get_programs_by_name',
+          description: 'Busca programas de viajes de LumbreTravel por nombre',
           inputSchema: {
             type: 'object',
             properties: {
@@ -1126,9 +1126,9 @@ export class ToolsHandler {
           }
         }
 
-        case 'get_program_by_name': {
+        case 'get_programs_by_name': {
           const { name } = args as { name: string }
-          const program = await this.apiService.getProgramByName(name)
+          const program = await this.apiService.getProgramsByName(name)
           return {
             content: [{
               type: 'text',

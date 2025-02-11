@@ -90,19 +90,12 @@ export class ApiService {
     return await this.handleResponse<any>(response)
   }
 
-  async getProgramByName (name: string) {
+  async getProgramsByName (name: string) {
     const headers = await this.getHeaders()
     const dataToSend = new URLSearchParams({
-      query: JSON.stringify({
-        query: {
-          name: {
-            $regex: name,
-            $options: 'i'
-          }
-        }
-      })
+      name
     })
-    const response = await fetch(`${API_CONFIG.baseUrl}/integrations/mcp/programs/find`, {
+    const response = await fetch(`${API_CONFIG.baseUrl}/integrations/mcp/programs/get_programs_by_name`, {
       method: 'POST',
       headers,
       body: dataToSend

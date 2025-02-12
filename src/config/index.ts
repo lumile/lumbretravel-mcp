@@ -3,7 +3,7 @@ dotenv.config()
 
 export const SERVER_CONFIG = {
   name: 'lumbretravel',
-  version: '0.1.7',
+  version: '0.1.10',
   capabilities: {
     resources: {},
     tools: {},

@@ -102,7 +102,7 @@ export class ToolsHandler {
         },
         {
           name: 'create_program',
-          description: 'Crea un nuevo programa de viajes en LumbreTravel.  Antes de crear un nuevo programa se debe preguntar al si quiere que primero se busque el programa a ver si existe.',
+          description: 'Crea un nuevo programa de viajes en LumbreTravel.  Antes de crear un nuevo programa se debe preguntar al si quiere que primero se busque el programa a ver si existe. Si no se especifica la fecha de inicio o fin del programa, no la asumas, pide al usuario que la especifique. Si no se especifica el ID de la agencia, pide al usuario que la especifique.',
           inputSchema: {
             type: 'object',
             properties: {

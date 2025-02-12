@@ -61,7 +61,7 @@ This MCP Server allows access to all the tools that LumbreTravel API provides.
 - `update_service` - Update a service
 - `delete_service` - Delete a service
 - `reactivate_service` - Reactivate a service
-- `get_service_by_name` - Get a service by name
+- `get_services_by_name` - Get a service by name
 
 #### Service Languages
 

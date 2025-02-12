@@ -434,7 +434,7 @@ export class ToolsHandler {
         },
         {
           name: 'add_activities',
-          description: 'Crea actividades asociadas a un programa en LumbreTravel.  Es importante que los servicios, hoteles, guías, vehículos y extras ya existan en LumbreTravel, si no existen se puede usar las tools create_service, create_hotel, create_leader, create_vehicle y create_include para crearlos.  O si existen se puede usar las tools get_service_by_name, get_hotel_by_name, get_leader_by_name, get_vehicle_by_name y get_include_by_name para obtener el id de cada servicio, hotel, guía, vehículo y extra.',
+          description: 'Crea actividades asociadas a un programa en LumbreTravel.  Es importante que los servicios, hoteles, guías, vehículos y extras ya existan en LumbreTravel, si no existen se puede usar las tools create_service, create_hotel, create_leader, create_vehicle y create_include para crearlos.  O si existen se puede usar las tools get_services_by_name, get_hotel_by_name, get_leader_by_name, get_vehicle_by_name y get_include_by_name para obtener el id de cada servicio, hotel, guía, vehículo y extra.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -474,7 +474,7 @@ export class ToolsHandler {
                     },
                     service: {
                       type: 'object',
-                      description: 'Servicio a asociar a la actividad, es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_service_by_name para obtener el id del servicio.',
+                      description: 'Servicio a asociar a la actividad, es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_services_by_name para obtener el id del servicio.',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -594,7 +594,7 @@ export class ToolsHandler {
                     },
                     service: {
                       type: 'object',
-                      description: 'Servicio a asociar a la actividad, es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_service_by_name para obtener el id del servicio.',
+                      description: 'Servicio a asociar a la actividad, es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_services_by_name para obtener el id del servicio.',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -1075,7 +1075,7 @@ export class ToolsHandler {
         },
         {
           name: 'update_service',
-          description: 'Actualizar un servicio en LumbreTravel, retorna el servicio actualizado.  Es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_service_by_name para obtener el id del servicio.',
+          description: 'Actualizar un servicio en LumbreTravel, retorna el servicio actualizado.  Es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_services_by_name para obtener el id del servicio.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -1104,7 +1104,7 @@ export class ToolsHandler {
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del servicio a reactivar' } }, required: ['id'] }
         },
         {
-          name: 'get_service_by_name',
+          name: 'get_services_by_name',
           description: 'Buscar servicios por su nombre, retorna la lista de servicios encontrados.',
           inputSchema: { type: 'object', properties: { name: { type: 'string', description: 'Nombre del servicio' } }, required: ['name'] }
         }
@@ -1540,9 +1540,9 @@ export class ToolsHandler {
           }
         }
 
-        case 'get_service_by_name': {
+        case 'get_services_by_name': {
           const { name } = args as { name: string }
-          const service = await this.apiService.getServiceByName(name)
+          const service = await this.apiService.getServicesByName(name)
           return {
             content: [{ type: 'text', text: JSON.stringify(service, null, 2) }]
           }

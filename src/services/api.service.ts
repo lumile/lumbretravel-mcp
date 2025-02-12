@@ -721,7 +721,7 @@ export class ApiService {
     return await this.handleResponse<any>(response)
   }
 
-  async getServiceByName (name: string) {
+  async getServicesByName (name: string) {
     const headers = await this.getHeaders()
     const response = await fetch(`${API_CONFIG.baseUrl}/integrations/mcp/service/get_services_by_name`, {
       method: 'POST',

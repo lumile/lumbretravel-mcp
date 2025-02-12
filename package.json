@@ -1,6 +1,6 @@
 {
   "name": "lumbretravel-mcp",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "A Model Context Protocol server for LumbreTravel",
   "main": "build/index.js",
   "homepage": "https://lumile.com.ar",

@@ -15,7 +15,7 @@ export class ToolsHandler {
       tools: [
         {
           name: 'get_program',
-          description: 'Obtiene un programa de viajes de LumbreTravel por ID',
+          description: 'Obtiene un programa de viajes por ID',
           inputSchema: {
             type: 'object',
             properties: {
@@ -29,7 +29,7 @@ export class ToolsHandler {
         },
         {
           name: 'get_programs_by_name',
-          description: 'Busca programas de viajes de LumbreTravel por nombre',
+          description: 'Busca programas de viajes por nombre',
           inputSchema: {
             type: 'object',
             properties: {
@@ -43,7 +43,7 @@ export class ToolsHandler {
         },
         {
           name: 'get_programs_by_date_range',
-          description: 'Obtiene programas de viajes de LumbreTravel por rango de fechas',
+          description: 'Obtiene programas de viajes por rango de fechas',
           inputSchema: {
             type: 'object',
             properties: {
@@ -60,7 +60,7 @@ export class ToolsHandler {
         },
         {
           name: 'daily_activities',
-          description: "Obtiene las actividades diarias en LumbreTravel.  Retorna un objeto JSON con un array de actividaes en la propiedad 'activities' con las actividades del día buscado.  En la propiedad 'monthlyTotals' se encuentra el total de actividades de cada día del mes",
+          description: 'Obtiene las actividades diarias',
           inputSchema: {
             type: 'object',
             properties: {
@@ -90,7 +90,7 @@ export class ToolsHandler {
         },
         {
           name: 'season_summary',
-          description: "Obtiene un resumen de pasajeros a lo largo de una temporada.  Retorna un objeto JSON que contiene un array por cada año de la temporada.  En cada item del array la propiedad 'yearTotal' contiene el total de pasajeros del año.  En la propiedad 'agencies' se encuentra un resumen por mes de los pasajeros del año asociados a cada agencia.  Y en el array 'monthlyTotals' se encuentra el total de pasajeros de cada mes.  Esta tool es muy útil para obtener el total de pasajeros de una temporada y ver como se distribuye por agencias.  Siempre que se quiera obtener información estadistica de pasajeros se debe usar esta tool.  Al ser una solucion para agencias de viaje los analisis estadísticos pueden ser muy útiles para tomar decisiones de negocio.  Se pueden usar estos datos para armar graficos e indicadores.  Ademas es normal que las fechas de analisis sean en el futuro.",
+          description: 'Obtiene un resumen de pasajeros a lo largo de una temporada.  Esta tool es muy útil para obtener el total de pasajeros de una temporada y ver como se distribuye por agencias.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -102,7 +102,7 @@ export class ToolsHandler {
         },
         {
           name: 'create_program',
-          description: 'Crea un nuevo programa de viajes en LumbreTravel.  Antes de crear un nuevo programa se debe preguntar al si quiere que primero se busque el programa a ver si existe. Si no se especifica la fecha de inicio o fin del programa, no la asumas, pide al usuario que la especifique. Si no se especifica el ID de la agencia, pide al usuario que la especifique.',
+          description: 'Crea un nuevo programa de viajes.  Antes de crear un nuevo programa se debe preguntar al si quiere que primero se busque el programa a ver si existe. Si no se especifica la fecha de inicio o fin del programa, no la asumas, pide al usuario que la especifique. Si no se especifica el ID de la agencia, pide al usuario que la especifique.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -158,7 +158,7 @@ export class ToolsHandler {
         },
         {
           name: 'delete_program',
-          description: 'Elimina un programa de viajes en LumbreTravel',
+          description: 'Elimina un programa de viajes',
           inputSchema: {
             type: 'object',
             properties: {
@@ -169,7 +169,7 @@ export class ToolsHandler {
         },
         {
           name: 'reactivate_program',
-          description: 'Reactiva un programa de viajes en LumbreTravel',
+          description: 'Reactiva un programa de viajes',
           inputSchema: {
             type: 'object',
             properties: {
@@ -180,7 +180,7 @@ export class ToolsHandler {
         },
         {
           name: 'list_agencies',
-          description: 'Obtiene todas las agencias disponibles para asociar a un programa de viajes en LumbreTravel',
+          description: 'Obtiene todas las agencias disponibles para asociar a un programa de viajes',
           inputSchema: {
             type: 'object',
             properties: {}
@@ -188,7 +188,7 @@ export class ToolsHandler {
         },
         {
           name: 'list_services',
-          description: 'Obtiene todos los servicios disponibles para asociar a una actividad en un programa de viajes en LumbreTravel',
+          description: 'Obtiene todos los servicios disponibles para asociar a una actividad en un programa de viajes',
           inputSchema: {
             type: 'object',
             properties: {}
@@ -196,7 +196,7 @@ export class ToolsHandler {
         },
         {
           name: 'list_hotels',
-          description: 'Obtiene todos los hoteles disponibles para asociar a una actividad en un programa de viajes en LumbreTravel',
+          description: 'Obtiene todos los hoteles disponibles para asociar a una actividad en un programa de viajes',
           inputSchema: {
             type: 'object',
             properties: {}
@@ -204,7 +204,7 @@ export class ToolsHandler {
         },
         {
           name: 'list_leaders',
-          description: 'Obtiene todos los guías disponibles para asociar a una actividad en un programa de viajes en LumbreTravel',
+          description: 'Obtiene todos los guías disponibles para asociar a una actividad en un programa de viajes',
           inputSchema: {
             type: 'object',
             properties: {}
@@ -212,7 +212,7 @@ export class ToolsHandler {
         },
         {
           name: 'list_vehicles',
-          description: 'Obtiene todos los vehículos disponibles para asociar a una actividad en un programa de viajes en LumbreTravel',
+          description: 'Obtiene todos los vehículos disponibles para asociar a una actividad en un programa de viajes',
           inputSchema: {
             type: 'object',
             properties: {}
@@ -220,7 +220,7 @@ export class ToolsHandler {
         },
         {
           name: 'list_includes',
-          description: 'Obtiene todos los incluye o extras disponibles para asociar a una actividad en un programa de viajes en LumbreTravel',
+          description: 'Obtiene todos los incluye o extras disponibles para asociar a una actividad en un programa de viajes',
           inputSchema: {
             type: 'object',
             properties: {}
@@ -228,7 +228,7 @@ export class ToolsHandler {
         },
         {
           name: 'list_service_languages',
-          description: 'Obtiene todos los idiomas en los que se pueden prestar los servicios para asociar a una actividad en un programa de viajes en LumbreTravel.  Estos idiomas solo se pueden usar para asociar a un servicio.  Estos idiomas solo pueden ser asociados a un servicio',
+          description: 'Obtiene todos los idiomas para asociar a una actividad en un programa de viajes.  Estos idiomas solo se pueden usar para asociar a un servicio.',
           inputSchema: {
             type: 'object',
             properties: {}
@@ -236,7 +236,7 @@ export class ToolsHandler {
         },
         {
           name: 'list_providers',
-          description: 'Obtiene todos los proveedores disponibles en LumbreTravel',
+          description: 'Obtiene todos los proveedores disponibles',
           inputSchema: {
             type: 'object',
             properties: {}
@@ -244,7 +244,7 @@ export class ToolsHandler {
         },
         {
           name: 'get_passengers_by_fullname',
-          description: 'Obtiene pasajeros por nombre completo en LumbreTravel',
+          description: 'Obtiene pasajeros por nombre completo',
           inputSchema: {
             type: 'object',
             properties: {
@@ -255,7 +255,7 @@ export class ToolsHandler {
         },
         {
           name: 'get_passengers_by_email',
-          description: 'Obtiene pasajeros por email en LumbreTravel',
+          description: 'Obtiene pasajeros por email',
           inputSchema: {
             type: 'object',
             properties: {
@@ -295,7 +295,7 @@ export class ToolsHandler {
         // },
         {
           name: 'create_passengers',
-          description: 'Crea pasajeros en LumbreTravel, usa esta tool cuando el asistente recibe los datos de los pasajeros como parte del pedido del usuario',
+          description: 'Crea pasajeros, usa esta tool cuando el asistente recibe los datos de los pasajeros como parte del pedido del usuario',
           inputSchema: {
             type: 'object',
             properties: {
@@ -330,7 +330,7 @@ export class ToolsHandler {
         },
         {
           name: 'update_passengers',
-          description: 'Edita pasajeros en LumbreTravel teniendo en cuenta que se conoce el ID del pasajero.  Si el id no se conoce entonces se puede usar la tool get_passengers_by_fullname o get_passengers_by_email para obtener el id del pasajero.  Retorna el pasajero editado.',
+          description: 'Edita pasajeros teniendo en cuenta que se conoce el ID del pasajero.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -366,7 +366,7 @@ export class ToolsHandler {
         },
         {
           name: 'delete_passengers',
-          description: 'Elimina pasajeros en LumbreTravel teniendo en cuenta que se conoce el ID del pasajero.  Si el id no se conoce entonces se puede usar la tool get_passengers_by_fullname o get_passengers_by_email para obtener el id del pasajero.  Retorna el pasajero eliminado.',
+          description: 'Elimina pasajeros teniendo en cuenta que se conoce el ID del pasajero',
           inputSchema: {
             type: 'object',
             properties: {
@@ -389,7 +389,7 @@ export class ToolsHandler {
         },
         {
           name: 'delete_passenger',
-          description: 'Elimina un pasajero en LumbreTravel teniendo en cuenta que se conoce el ID del pasajero.  Si el id no se conoce entonces se puede usar la tool get_passengers_by_fullname o get_passengers_by_email para obtener el id del pasajero.  Retorna el pasajero eliminado.',
+          description: 'Elimina un pasajero teniendo en cuenta que se conoce su ID',
           inputSchema: {
             type: 'object',
             properties: {
@@ -400,7 +400,7 @@ export class ToolsHandler {
         },
         {
           name: 'reactivate_passenger',
-          description: 'Reactiva un pasajero en LumbreTravel teniendo en cuenta que se conoce el ID del pasajero.  Si el id no se conoce entonces se puede usar la tool get_passengers_by_fullname o get_passengers_by_email para obtener el id del pasajero.  Retorna el pasajero reactivado.',
+          description: 'Reactiva un pasajero teniendo en cuenta que se conoce su ID',
           inputSchema: {
             type: 'object',
             properties: {
@@ -411,7 +411,7 @@ export class ToolsHandler {
         },
         {
           name: 'add_passengers_to_program',
-          description: 'Agrega pasajeros a un programa en LumbreTravel.  Es importante que los pasajeros ya existan en LumbreTravel, si no existen se puede usar la tool create_passengers para crearlos.  O si existen se puede usar la tool get_passengers_by_fullname o get_passengers_by_email para obtener el id de cada pasajero.',
+          description: 'Agrega pasajeros a un programa.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -434,7 +434,7 @@ export class ToolsHandler {
         },
         {
           name: 'add_activities',
-          description: 'Crea actividades asociadas a un programa en LumbreTravel.  Es importante que los servicios, hoteles, guías, vehículos y extras ya existan en LumbreTravel, si no existen se puede usar las tools create_service, create_hotel, create_leader, create_vehicle y create_include para crearlos.  O si existen se puede usar las tools get_services_by_name, get_hotel_by_name, get_leader_by_name, get_vehicle_by_name y get_include_by_name para obtener el id de cada servicio, hotel, guía, vehículo y extra.',
+          description: 'Crea actividades asociadas a un programa.  Es importante que los servicios, hoteles, guías, vehículos y extras ya existan',
           inputSchema: {
             type: 'object',
             properties: {
@@ -454,7 +454,7 @@ export class ToolsHandler {
                     },
                     passengers: {
                       type: 'array',
-                      description: 'Lista de pasajeros a asociar a la actividad, es importante que los pasajeros ya existan en LumbreTravel, si no existen se puede usar la tool create_passengers para crearlos.  O si existen se puede usar la tool get_passengers_by_fullname o get_passengers_by_email para obtener el id de cada pasajero.',
+                      description: 'Lista de pasajeros a asociar a la actividad, es importante que los pasajeros ya existan',
                       items: {
                         type: 'object',
                         properties: {
@@ -474,7 +474,7 @@ export class ToolsHandler {
                     },
                     service: {
                       type: 'object',
-                      description: 'Servicio a asociar a la actividad, es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_services_by_name para obtener el id del servicio.',
+                      description: 'Servicio a asociar a la actividad, es importante que el servicio ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -483,7 +483,7 @@ export class ToolsHandler {
                     },
                     hotel: {
                       type: 'object',
-                      description: 'Hotel a asociar a la actividad, es importante que el hotel ya exista en LumbreTravel, si no existe se puede usar la tool create_hotel para crearlo.  O si existe se puede usar la tool get_hotel_by_name para obtener el id del hotel.',
+                      description: 'Hotel a asociar a la actividad, es importante que el hotel ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -492,7 +492,7 @@ export class ToolsHandler {
                     },
                     leader: {
                       type: 'object',
-                      description: 'Guía a asociar a la actividad, es importante que el guía ya exista en LumbreTravel, si no existe se puede usar la tool create_leader para crearlo.  O si existe se puede usar la tool get_leader_by_name para obtener el id del guía.',
+                      description: 'Guía a asociar a la actividad, es importante que el guía ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -501,7 +501,7 @@ export class ToolsHandler {
                     },
                     vehicle: {
                       type: 'object',
-                      description: 'Vehículo a asociar a la actividad, es importante que el vehículo ya exista en LumbreTravel, si no existe se puede usar la tool create_vehicle para crearlo.  O si existe se puede usar la tool get_vehicle_by_name para obtener el id del vehículo.',
+                      description: 'Vehículo a asociar a la actividad, es importante que el vehículo ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -510,7 +510,7 @@ export class ToolsHandler {
                     },
                     includes: {
                       type: 'array',
-                      description: 'Lista de extras o incluídos a asociar a la actividad, es importante que los extras ya existan en LumbreTravel, si no existen se puede usar la tool create_include para crearlos.  O si existen se puede usar la tool get_include_by_name para obtener el id de cada extra.',
+                      description: 'Lista de extras o incluídos a asociar a la actividad, es importante que los extras ya existan',
                       items: {
                         type: 'object',
                         properties: {
@@ -521,7 +521,7 @@ export class ToolsHandler {
                     },
                     servicelanguage: {
                       type: 'object',
-                      description: 'Idioma en el que se va a prestar el servicio, si no se especifica se mantiene el idioma actual. Es importante que el idioma ya exista en LumbreTravel, si no existe se puede usar la tool create_service_language para crearlo.  O si existe se puede usar la tool get_service_language_by_name para obtener el id del idioma.  Este idioma solo se puede usar para asociar a un servicio.',
+                      description: 'Idioma en el que se va a prestar el servicio, si no se especifica se mantiene el idioma actual. Es importante que el idioma ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -530,15 +530,15 @@ export class ToolsHandler {
                     },
                     code: {
                       type: 'string',
-                      description: 'Código de la actividad, es de carga libre, se puede usar para identificar la actividad en el programa'
+                      description: 'Código de la actividad'
                     },
                     itinerary: {
                       type: 'string',
-                      description: 'Itinerario de la actividad, es de carga libre, se puede usar para describir la actividad en el programa'
+                      description: 'Itinerario de la actividad'
                     },
                     news: {
                       type: 'string',
-                      description: 'Noticias de la actividad, es de carga libre, se puede usar para describir noticias o novedades de la actividad en el programa'
+                      description: 'Noticias de la actividad'
                     }
                   },
                   required: ['date', 'hour', 'primaryPassenger']
@@ -560,13 +560,13 @@ export class ToolsHandler {
               },
               activities: {
                 type: 'array',
-                description: 'Lista de actividades a actualizar, es importante que las actividades ya existan en LumbreTravel, si no existen se puede usar la tool add_activities para crearlas.  O si existen se puede usar la tool get_program_by_name para obtener la lista de todas las actividades del programa.',
+                description: 'Lista de actividades a actualizar',
                 items: {
                   type: 'object',
                   properties: {
                     activityId: {
                       type: 'string',
-                      description: 'ID de la actividad a actualizar, es importante que la actividad ya exista en LumbreTravel, si no existe se puede usar la tool add_activities para crearla.  O si existe se puede usar la tool get_program_by_name para obtener la lista de todas las actividades del programa.'
+                      description: 'ID de la actividad a actualizar, es importante que la actividad ya exista'
                     },
                     primaryPassenger: {
                       type: 'string',
@@ -574,7 +574,7 @@ export class ToolsHandler {
                     },
                     passengers: {
                       type: 'array',
-                      description: 'Lista de pasajeros a asociar a la actividad, es importante que los pasajeros ya existan en LumbreTravel, si no existen se puede usar la tool create_passengers para crearlos.  O si existen se puede usar la tool get_passengers_by_fullname o get_passengers_by_email para obtener el id de cada pasajero.',
+                      description: 'Lista de pasajeros a asociar a la actividad, es importante que los pasajeros ya existan',
                       items: {
                         type: 'object',
                         properties: {
@@ -594,7 +594,7 @@ export class ToolsHandler {
                     },
                     service: {
                       type: 'object',
-                      description: 'Servicio a asociar a la actividad, es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_services_by_name para obtener el id del servicio.',
+                      description: 'Servicio a asociar a la actividad, es importante que ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -603,7 +603,7 @@ export class ToolsHandler {
                     },
                     hotel: {
                       type: 'object',
-                      description: 'Hotel a asociar a la actividad, es importante que el hotel ya exista en LumbreTravel, si no existe se puede usar la tool create_hotel para crearlo.  O si existe se puede usar la tool get_hotel_by_name para obtener el id del hotel.',
+                      description: 'Hotel a asociar a la actividad, es importante que ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -612,7 +612,7 @@ export class ToolsHandler {
                     },
                     leader: {
                       type: 'object',
-                      description: 'Guía a asociar a la actividad, es importante que el guía ya exista en LumbreTravel, si no existe se puede usar la tool create_leader para crearlo.  O si existe se puede usar la tool get_leader_by_name para obtener el id del guía.',
+                      description: 'Guía a asociar a la actividad, es importante que ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -621,7 +621,7 @@ export class ToolsHandler {
                     },
                     vehicle: {
                       type: 'object',
-                      description: 'Vehículo a asociar a la actividad, es importante que el vehículo ya exista en LumbreTravel, si no existe se puede usar la tool create_vehicle para crearlo.  O si existe se puede usar la tool get_vehicle_by_name para obtener el id del vehículo.',
+                      description: 'Vehículo a asociar a la actividad, es importante que ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -630,7 +630,7 @@ export class ToolsHandler {
                     },
                     includes: {
                       type: 'array',
-                      description: 'Lista de extras o incluídos a asociar a la actividad, es importante que los extras ya existan en LumbreTravel, si no existen se puede usar la tool create_include para crearlos.  O si existen se puede usar la tool get_include_by_name para obtener el id de cada extra.',
+                      description: 'Lista de extras o incluídos a asociar a la actividad, es importante que ya existan',
                       items: {
                         type: 'object',
                         properties: {
@@ -641,7 +641,7 @@ export class ToolsHandler {
                     },
                     servicelanguage: {
                       type: 'object',
-                      description: 'Idioma en el que se va a prestar el servicio, si no se especifica se mantiene el idioma actual. Es importante que el idioma ya exista en LumbreTravel, si no existe se puede usar la tool create_service_language para crearlo.  O si existe se puede usar la tool get_service_language_by_name para obtener el id del idioma.',
+                      description: 'Idioma en el que se va a prestar el servicio, si no se especifica se mantiene el idioma actual. Es importante que ya exista',
                       properties: {
                         id: { type: 'string' },
                         name: { type: 'string' }
@@ -650,15 +650,15 @@ export class ToolsHandler {
                     },
                     code: {
                       type: 'string',
-                      description: 'Código de la actividad, es de carga libre, se puede usar para identificar la actividad en el programa'
+                      description: 'Código de la actividad'
                     },
                     itinerary: {
                       type: 'string',
-                      description: 'Itinerario de la actividad, es de carga libre, se puede usar para describir la actividad en el programa'
+                      description: 'Itinerario de la actividad'
                     },
                     news: {
                       type: 'string',
-                      description: 'Noticias de la actividad, es de carga libre, se puede usar para describir noticias o novedades de la actividad en el programa'
+                      description: 'Noticias de la actividad'
                     }
                   },
                   required: ['date', 'hour', 'primaryPassenger']
@@ -677,7 +677,7 @@ export class ToolsHandler {
               programId: { type: 'string', description: 'ID del programa' },
               activities: {
                 type: 'array',
-                description: 'Lista de actividades a eliminar.  Para poder eliminar una actividad se debe especificar el ID de la actividad.  Se puede usar la tool get_program_by_name para obtener la lista de todas las actividades del programa.  Es importante avisarle al usuario que esta acción es irreversible y que se debe tener cuidado al eliminar actividades.',
+                description: 'Lista de actividades a eliminar.  Es importante avisarle al usuario que esta acción es irreversible y que se debe tener cuidado al eliminar actividades.',
                 items: {
                   type: 'object',
                   properties: {
@@ -692,7 +692,7 @@ export class ToolsHandler {
         },
         {
           name: 'create_agency',
-          description: 'Crear una agencia en LumbreTravel, retorna la agencia creada.  Antes de crear una nueva agencia se debe preguntar al si quiere que primero se busque la agencia a ver si existe.  La agencia creada se puede usar para asociarle programas en LumbreTravel.  Es importante que el proveedor de la agencia tenga un ID de proveedor en LumbreTravel.  Si el proveedor no tiene un ID de proveedor en LumbreTravel, se puede usar la tool create_provider para crear un proveedor y luego usar el ID de proveedor creado para crear la agencia.  Si el proveedor ya tiene un ID de proveedor en LumbreTravel, se puede usar el ID de proveedor para crear la agencia. Para buscar un proveedor por nombre se puede usar la tool get_provider_by_name.',
+          description: 'Crear una agencia.  Antes de crear una nueva agencia se debe preguntar al si quiere que primero se busque la agencia a ver si existe',
           inputSchema: {
             type: 'object',
             properties: {
@@ -701,7 +701,7 @@ export class ToolsHandler {
               provider: {
                 type: 'object',
                 properties: {
-                  id: { type: 'string', description: 'ID del proveedor de la agencia.  Si el proveedor no tiene un ID de proveedor en LumbreTravel, se puede usar la tool create_provider para crear un proveedor y luego usar el ID de proveedor creado para crear la agencia.  Si el proveedor ya tiene un ID de proveedor en LumbreTravel, se puede usar el ID de proveedor para crear la agencia. Para buscar un proveedor por nombre se puede usar la tool get_provider_by_name.' },
+                  id: { type: 'string', description: 'ID del proveedor de la agencia.' },
                   name: { type: 'string', description: 'Nombre del proveedor de la agencia' }
                 }
               }
@@ -711,17 +711,17 @@ export class ToolsHandler {
         },
         {
           name: 'update_agency',
-          description: 'Actualizar una agencia en LumbreTravel, retorna la agencia actualizada.  La agencia actualizada se puede usar para asociarle programas en LumbreTravel.  Es importante que el proveedor de la agencia tenga un ID de proveedor en LumbreTravel.  Si el proveedor no tiene un ID de proveedor en LumbreTravel, se puede usar la tool create_provider para crear un proveedor y luego usar el ID de proveedor creado para crear la agencia.  Si el proveedor ya tiene un ID de proveedor en LumbreTravel, se puede usar el ID de proveedor para crear la agencia. Para buscar un proveedor por nombre se puede usar la tool get_provider_by_name.',
+          description: 'Actualizar una agencia',
           inputSchema: {
             type: 'object',
             properties: {
-              id: { type: 'string', description: 'ID de la agencia a actualizar, es importante que la agencia ya exista en LumbreTravel, si no existe se puede usar la tool create_agency para crearla.  O si existe se puede usar la tool get_agency_by_name para obtener el id de la agencia.' },
+              id: { type: 'string', description: 'ID de la agencia a actualizar' },
               name: { type: 'string', description: 'Nombre de la agencia' },
               description: { type: 'string', description: 'Descripción de la agencia' },
               provider: {
                 type: 'object',
                 properties: {
-                  id: { type: 'string', description: 'ID del proveedor de la agencia.  Si el proveedor no tiene un ID de proveedor en LumbreTravel, se puede usar la tool create_provider para crear un proveedor y luego usar el ID de proveedor creado para crear la agencia.  Si el proveedor ya tiene un ID de proveedor en LumbreTravel, se puede usar el ID de proveedor para crear la agencia. Para buscar un proveedor por nombre se puede usar la tool get_provider_by_name.' },
+                  id: { type: 'string', description: 'ID del proveedor de la agencia' },
                   name: { type: 'string', description: 'Nombre del proveedor de la agencia' }
                 }
               }
@@ -731,7 +731,7 @@ export class ToolsHandler {
         },
         {
           name: 'delete_agency',
-          description: 'Eliminar una agencia en LumbreTravel.  La agencia eliminada no se puede usar para asociarle programas en LumbreTravel.',
+          description: 'Eliminar una agencia.  La agencia eliminada no se puede usar para asociarle programas',
           inputSchema: {
             type: 'object',
             properties: {
@@ -742,7 +742,7 @@ export class ToolsHandler {
         },
         {
           name: 'reactivate_agency',
-          description: 'Reactivar una agencia en LumbreTravel',
+          description: 'Reactivar una agencia',
           inputSchema: {
             type: 'object',
             properties: { id: { type: 'string', description: 'ID de la agencia a reactivar' } },
@@ -760,7 +760,7 @@ export class ToolsHandler {
         },
         {
           name: 'create_hotel',
-          description: 'Crear un hotel en LumbreTravel, retorna el hotel creado.  Antes de crear un nuevo hotel se debe preguntar al si quiere que primero se busque el hotel a ver si existe.',
+          description: 'Antes de crear un nuevo hotel se debe preguntar al si quiere que primero se busque el hotel a ver si existe.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -775,7 +775,7 @@ export class ToolsHandler {
         },
         {
           name: 'update_hotel',
-          description: 'Actualizar un hotel en LumbreTravel, retorna el hotel actualizado.',
+          description: 'Actualizar un hotel',
           inputSchema: {
             type: 'object',
             properties: {
@@ -791,7 +791,7 @@ export class ToolsHandler {
         },
         {
           name: 'delete_hotel',
-          description: 'Eliminar un hotel en LumbreTravel.',
+          description: 'Eliminar un hotel',
           inputSchema: {
             type: 'object',
             properties: { id: { type: 'string', description: 'ID del hotel a eliminar' } },
@@ -800,7 +800,7 @@ export class ToolsHandler {
         },
         {
           name: 'reactivate_hotel',
-          description: 'Reactivar un hotel en LumbreTravel',
+          description: 'Reactivar un hotel',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del hotel a reactivar' } }, required: ['id'] }
         },
         {
@@ -814,7 +814,7 @@ export class ToolsHandler {
         },
         {
           name: 'create_leader',
-          description: 'Crear un guía en LumbreTravel.  Antes de crear un nuevo guía se debe preguntar al si quiere que primero se busque el guía a ver si existe.',
+          description: 'Crear un guía.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -832,7 +832,7 @@ export class ToolsHandler {
         },
         {
           name: 'update_leader',
-          description: 'Actualizar un guía en LumbreTravel, retorna el guía actualizado.  Es importante que el guía ya exista en LumbreTravel, si no existe se puede usar la tool create_leader para crearlo.  O si existe se puede usar la tool get_leader_by_name para obtener el id del guía.',
+          description: 'Actualizar un guía',
           inputSchema: {
             type: 'object',
             properties: {
@@ -851,22 +851,22 @@ export class ToolsHandler {
         },
         {
           name: 'delete_leader',
-          description: 'Eliminar un guía en LumbreTravel',
+          description: 'Eliminar un guía',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del guía a eliminar' } }, required: ['id'] }
         },
         {
           name: 'reactivate_leader',
-          description: 'Reactivar un guía en LumbreTravel',
+          description: 'Reactivar un guía',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del guía a reactivar' } }, required: ['id'] }
         },
         {
           name: 'get_leader_by_name',
-          description: 'Buscar guías por su nombre, retorna la lista de guías encontrados.',
+          description: 'Buscar guías por su nombre.',
           inputSchema: { type: 'object', properties: { name: { type: 'string', description: 'Nombre del guía' } }, required: ['name'] }
         },
         {
           name: 'create_vehicle',
-          description: 'Crear un vehículo en LumbreTravel.  Antes de crear un nuevo vehículo se debe preguntar al si quiere que primero se busque el vehículo a ver si existe.',
+          description: 'Crear un vehículo.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -878,7 +878,7 @@ export class ToolsHandler {
               provider: {
                 type: 'object',
                 properties: {
-                  id: { type: 'string', description: 'ID del proveedor del vehículo.  Si el proveedor no tiene un ID de proveedor en LumbreTravel, se puede usar la tool create_provider para crear un proveedor y luego usar el ID de proveedor creado para crear el vehículo.  Si el proveedor ya tiene un ID de proveedor en LumbreTravel, se puede usar el ID de proveedor para crear el vehículo. Para buscar un proveedor por nombre se puede usar la tool get_provider_by_name.' },
+                  id: { type: 'string', description: 'ID del proveedor del vehículo.' },
                   name: { type: 'string', description: 'Nombre del proveedor del vehículo' }
                 }
               }
@@ -888,7 +888,7 @@ export class ToolsHandler {
         },
         {
           name: 'update_vehicle',
-          description: 'Actualizar un vehículo en LumbreTravel, retorna el vehículo actualizado.  Es importante que el vehículo ya exista en LumbreTravel, si no existe se puede usar la tool create_vehicle para crearlo.  O si existe se puede usar la tool get_vehicle_by_name para obtener el id del vehículo.',
+          description: 'Actualizar un vehículo.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -901,7 +901,7 @@ export class ToolsHandler {
               provider: {
                 type: 'object',
                 properties: {
-                  id: { type: 'string', description: 'ID del proveedor del vehículo.  Si el proveedor no tiene un ID de proveedor en LumbreTravel, se puede usar la tool create_provider para crear un proveedor y luego usar el ID de proveedor creado para crear el vehículo.  Si el proveedor ya tiene un ID de proveedor en LumbreTravel, se puede usar el ID de proveedor para crear el vehículo. Para buscar un proveedor por nombre se puede usar la tool get_provider_by_name.' },
+                  id: { type: 'string', description: 'ID del proveedor del vehículo' },
                   name: { type: 'string', description: 'Nombre del proveedor del vehículo' }
                 }
               }
@@ -911,12 +911,12 @@ export class ToolsHandler {
         },
         {
           name: 'delete_vehicle',
-          description: 'Eliminar un vehículo en LumbreTravel',
+          description: 'Eliminar un vehículo.',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del vehículo a eliminar' } }, required: ['id'] }
         },
         {
           name: 'reactivate_vehicle',
-          description: 'Reactivar un vehículo en LumbreTravel',
+          description: 'Reactivar un vehículo.',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del vehículo a reactivar' } }, required: ['id'] }
         },
         {
@@ -926,7 +926,7 @@ export class ToolsHandler {
         },
         {
           name: 'create_include',
-          description: 'Crear un extra o incluído en LumbreTravel.  Antes de crear un nuevo extra o incluído se debe preguntar al si quiere que primero se busque el extra o incluído a ver si existe.',
+          description: 'Crear un extra o incluído.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -938,11 +938,11 @@ export class ToolsHandler {
         },
         {
           name: 'update_include',
-          description: 'Actualizar un extra o incluído en LumbreTravel, retorna el extra o incluído actualizado.  Es importante que el extra o incluído ya exista en LumbreTravel, si no existe se puede usar la tool create_include para crearlo.  O si existe se puede usar la tool get_include_by_name para obtener el id del extra o incluído.',
+          description: 'Actualizar un extra o incluído.',
           inputSchema: {
             type: 'object',
             properties: {
-              id: { type: 'string', description: 'ID del include a actualizar' },
+              id: { type: 'string', description: 'ID a actualizar' },
               name: { type: 'string', description: 'Nombre' },
               description: { type: 'string', description: 'Descripción' }
             },
@@ -951,7 +951,7 @@ export class ToolsHandler {
         },
         {
           name: 'delete_include',
-          description: 'Eliminar un extra o incluído en LumbreTravel',
+          description: 'Eliminar un extra o incluído',
           inputSchema: {
             type: 'object',
             properties: { id: { type: 'string', description: 'ID del include a eliminar' } },
@@ -960,17 +960,17 @@ export class ToolsHandler {
         },
         {
           name: 'reactivate_include',
-          description: 'Reactivar un extra o incluído en LumbreTravel',
+          description: 'Reactivar un extra o incluído',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del include a reactivar' } }, required: ['id'] }
         },
         {
           name: 'get_includes_by_name',
-          description: 'Buscar extras o incluídos por su nombre, retorna la lista de extras o incluídos encontrados.',
+          description: 'Buscar extras o incluídos por su nombre',
           inputSchema: { type: 'object', properties: { name: { type: 'string', description: 'Nombre del include' } }, required: ['name'] }
         },
         {
           name: 'create_service_language',
-          description: 'Crear un idioma de servicio en LumbreTravel.  Antes de crear un nuevo idioma de servicio se debe preguntar al si quiere que primero se busque el idioma de servicio a ver si existe.  Este idioma solo se puede usar para asociar a un servicio.',
+          description: 'Crear un idioma de servicio.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -981,7 +981,7 @@ export class ToolsHandler {
         },
         {
           name: 'update_service_language',
-          description: 'Actualizar un idioma de servicio en LumbreTravel, retorna el idioma de servicio actualizado.  Es importante que el idioma de servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service_language para crearlo.  O si existe se puede usar la tool get_service_language_by_name para obtener el id del idioma de servicio.  Este idioma solo se puede usar para asociar a un servicio.',
+          description: 'Actualizar un idioma de servicio.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -993,7 +993,7 @@ export class ToolsHandler {
         },
         {
           name: 'delete_service_language',
-          description: 'Eliminar un idioma de servicio en LumbreTravel',
+          description: 'Eliminar un idioma de servicio.',
           inputSchema: {
             type: 'object',
             properties: { id: { type: 'string', description: 'ID del idioma de servicio a eliminar' } },
@@ -1002,17 +1002,17 @@ export class ToolsHandler {
         },
         {
           name: 'reactivate_service_language',
-          description: 'Reactivar un idioma de servicio en LumbreTravel',
+          description: 'Reactivar un idioma de servicio.',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del idioma de servicio a reactivar' } }, required: ['id'] }
         },
         {
           name: 'get_service_language_by_name',
-          description: 'Buscar idiomas de servicio por su nombre, retorna la lista de idiomas de servicio encontrados.',
+          description: 'Buscar idiomas de servicio por su nombre.',
           inputSchema: { type: 'object', properties: { name: { type: 'string', description: 'Nombre del idioma de servicio' } }, required: ['name'] }
         },
         {
           name: 'create_provider',
-          description: 'Crear un proveedor en LumbreTravel.  Antes de crear un nuevo proveedor se debe preguntar al si quiere que primero se busque el proveedor a ver si existe.',
+          description: 'Crear un proveedor.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -1026,7 +1026,7 @@ export class ToolsHandler {
         },
         {
           name: 'update_provider',
-          description: 'Actualizar un proveedor en LumbreTravel, retorna el proveedor actualizado.  Es importante que el proveedor ya exista en LumbreTravel, si no existe se puede usar la tool create_provider para crearlo.  O si existe se puede usar la tool get_provider_by_name para obtener el id del proveedor.',
+          description: 'Actualizar un proveedor.',
           inputSchema: {
             type: 'object',
             properties: {
@@ -1041,22 +1041,22 @@ export class ToolsHandler {
         },
         {
           name: 'delete_provider',
-          description: 'Eliminar un proveedor en LumbreTravel',
+          description: 'Eliminar un proveedor.',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del proveedor a eliminar' } }, required: ['id'] }
         },
         {
           name: 'reactivate_provider',
-          description: 'Reactivar un proveedor en LumbreTravel',
+          description: 'Reactivar un proveedor.',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del proveedor a reactivar' } }, required: ['id'] }
         },
         {
           name: 'get_provider_by_name',
-          description: 'Buscar proveedores por su nombre, retorna la lista de proveedores encontrados.',
+          description: 'Buscar proveedores por su nombre',
           inputSchema: { type: 'object', properties: { name: { type: 'string', description: 'Nombre del proveedor' } }, required: ['name'] }
         },
         {
           name: 'create_service',
-          description: 'Crear un servicio en LumbreTravel.  Antes de crear un nuevo servicio se debe preguntar al si quiere que primero se busque el servicio a ver si existe.',
+          description: 'Crear un servicio',
           inputSchema: {
             type: 'object',
             properties: {
@@ -1065,7 +1065,7 @@ export class ToolsHandler {
               provider: {
                 type: 'object',
                 properties: {
-                  id: { type: 'string', description: 'ID del proveedor.  El proveedor debe existir en LumbreTravel.  Si el proveedor no existe se puede usar la tool create_provider para crearlo.  O si existe se puede usar la tool get_provider_by_name para obtener el id del proveedor.' },
+                  id: { type: 'string', description: 'ID del proveedor' },
                   name: { type: 'string', description: 'Nombre del proveedor' }
                 }
               }
@@ -1075,7 +1075,7 @@ export class ToolsHandler {
         },
         {
           name: 'update_service',
-          description: 'Actualizar un servicio en LumbreTravel, retorna el servicio actualizado.  Es importante que el servicio ya exista en LumbreTravel, si no existe se puede usar la tool create_service para crearlo.  O si existe se puede usar la tool get_services_by_name para obtener el id del servicio.',
+          description: 'Actualizar un servicio',
           inputSchema: {
             type: 'object',
             properties: {
@@ -1085,7 +1085,7 @@ export class ToolsHandler {
               provider: {
                 type: 'object',
                 properties: {
-                  id: { type: 'string', description: 'ID del proveedor.  El proveedor debe existir en LumbreTravel.  Si el proveedor no existe se puede usar la tool create_provider para crearlo.  O si existe se puede usar la tool get_provider_by_name para obtener el id del proveedor.' },
+                  id: { type: 'string', description: 'ID del proveedor' },
                   name: { type: 'string', description: 'Nombre del proveedor' }
                 }
               }
@@ -1095,12 +1095,12 @@ export class ToolsHandler {
         },
         {
           name: 'delete_service',
-          description: 'Eliminar un servicio en LumbreTravel',
+          description: 'Eliminar un servicio',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del servicio a eliminar' } }, required: ['id'] }
         },
         {
           name: 'reactivate_service',
-          description: 'Reactivar un servicio en LumbreTravel',
+          description: 'Reactivar un servicio',
           inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'ID del servicio a reactivar' } }, required: ['id'] }
         },
         {

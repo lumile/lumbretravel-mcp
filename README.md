@@ -7,6 +7,8 @@ An MCP server that provides access to LumbreTravel API.
 
 [LumbreTravel](https://lumbretravel.com.ar/) is a platform for managing travel programs and activities and this is the MCP server for it.  That allows you to use it on [Claude Desktop](https://claude.ai/download) or other MCP clients.
 
+<a href="https://glama.ai/mcp/servers/tp79r72xyd"><img width="380" height="200" src="https://glama.ai/mcp/servers/tp79r72xyd/badge" alt="LumbreTravel Server MCP server" /></a>
+
 ## Features
 
 This MCP Server allows access to all the tools that LumbreTravel API provides.

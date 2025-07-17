@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/lumile-lumbretravel-mcp-badge.png)](https://mseep.ai/app/lumile-lumbretravel-mcp)
+
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 [![smithery badge](https://smithery.ai/badge/@lumile/lumbretravel-mcp)](https://smithery.ai/server/@lumile/lumbretravel-mcp)
 
